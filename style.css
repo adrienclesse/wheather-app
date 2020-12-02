@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900");
+
+h1{
+    text-align: center;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+     color: #fff;
+    text-shadow: .1em .1em 0 rgba(0,0,0,0.3);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #072736, #a5c7d7, #b1d4e2, #e0d533, #407a8f);
+}
+
+
+
+
+.center{
+    display: grid;
+    grid-template-columns:40% 40%;
+    grid-template-rows:50px 40px 180px ;
+    padding-top:20px;
+    justify-content: center;
+    column-gap: 15px;
+    row-gap: 5px;
+    width: 50%;
+    margin:auto;
+    
+}
+
+
+
+#city{
+    text-align: center;
+}
+#city1{
+    text-align: center;
+}
+
+#weather1{
+    border: 2px solid black;
+    width: auto;
+    height: 135%;
+    margin: 0 auto;
+    margin:1px;
+    margin-top: 35px;
+    
+}
+
+#weather2{
+    border: 2px solid black;
+    width: auto;
+    height: 135%;
+    margin: 0 auto;
+    margin:1px;
+    margin-top: 35px;
+}
+
+
+#location{
+    font-size: 20px;
+    color: purple;
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+
+#description{
+    font-size: large;
+    text-align: center;
+}
+
+#logo{
+    width: 40%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+
+#temp{
+    font-size: large;
+    text-align: center;
+}
+
+#location1{
+    font-size: 20px;
+    color: green;
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+
+#description1{
+    font-size: large;
+    text-align: center;
+}
+
+#logo1{
+    width: 40%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+
+#temp1{
+    font-size: large;
+    text-align: center;
+}
+
+#submit {
+    cursor: pointer;
+    background-color: purple;
+    color:white;
+}
+
+#submit1 {
+    cursor: pointer;
+    background-color: green;
+    color:white;
+}
+
