@@ -23,13 +23,13 @@ document.getElementById("submit").addEventListener("click",function(){
         
         
 
-        function drawWeather( d ) {
-            var celcius = Math.round(parseFloat(d.main.temp)-273.15);
-            var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+        function drawWeather( data ) {
+            var celcius = Math.round(parseFloat(data.main.temp)-273.15);
+            var fahrenheit = Math.round(((parseFloat(data.main.temp)-273.15)*1.8)+32); 
             
-            document.getElementById('description').innerHTML = d.weather[0].description;
+            document.getElementById('description').innerHTML = data.weather[0].description;
             document.getElementById('temp').innerHTML = celcius + '&deg;';
-            document.getElementById('location').innerHTML = d.name;
+            document.getElementById('location').innerHTML = data.name;
 
             let weather = document.getElementById('description').innerHTML;
                 if(weather==="mist"){document.getElementById("logo").src = "img/wind.png";}
@@ -40,6 +40,9 @@ document.getElementById("submit").addEventListener("click",function(){
                 else if(weather==="shower rain"){document.getElementById("logo").src = "img/rain.png";}
                 else if(weather==="light rain"){document.getElementById("logo").src = "img/rain.png";}
                 else if(weather==="clear sky"){document.getElementById("logo").src = "img/sun.png";}
+                else if(weather==="fog"){document.getElementById("logo").src = "img/wind.png";}
+                else if(weather==="few clouds"){document.getElementById("logo").src = "img/cloud-sun.png";}
+
 
           }
 
@@ -85,6 +88,9 @@ document.getElementById("submit").addEventListener("click",function(){
                             else if(weather1==="shower rain"){document.getElementById("logo1").src = "img/rain.png";}
                             else if(weather1==="mist"){document.getElementById("logo1").src = "img/wind.png";}
                             else if(weather1==="light rain"){document.getElementById("logo1").src = "img/rain.png";}
+                            else if(weather1==="fog"){document.getElementById("logo1").src = "img/wind.png";}
+                            else if(weather1==="few clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
+                            else if(weather1.includes("snow")){document.getElementById("logo1").src = "img/snow.png";}
                 }
 })();
 
