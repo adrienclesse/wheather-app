@@ -60,7 +60,9 @@ document.getElementById("submit").addEventListener("click",function(){
                     else if(weather==="Few clouds"){logo.src = "img/cloud-sun.png";}
                     else if(weather==="Light shower rain"){logo.src = "img/rain.png";}
                     else if(weather==="Moderate rain"){logo.src = "img/rain.png";}
-                    
+                    else if(weather==="Mix snow/rain"){logo.src = "img/snow.png";}
+                    else if(weather==="Light rain"){logo.src = "img/rain.png";}
+
 
                    
             }
@@ -125,24 +127,36 @@ document.getElementById("submit").addEventListener("click",function(){
                     document.getElementById('tempday4-1').innerHTML = data1.data[4].temp + '&deg;';
                     document.getElementById('tempday5-1').innerHTML = data1.data[5].temp + '&deg;';
 
-                    function getLogo1(logo1,weather1){}
-                    let weather1 = document.getElementById('description1').innerHTML;
-
-                            if(weather1==="Clear sky"){document.getElementById("logo1").src = "img/sun.png";}
-                            else if(weather1==="Scattered clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
-                            else if(weather1==="Broken clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
-                            else if(weather1==="Overcast clouds"){document.getElementById("logo1").src = "img/cloud.png";}
-                            else if(weather1==="Shower rain"){document.getElementById("logo1").src = "img/rain.png";}
-                            else if(weather1==="Mist"){document.getElementById("logo1").src = "img/wind.png";}
-                            else if(weather1==="Light rain"){document.getElementById("logo1").src = "img/rain.png";}
-                            else if(weather1==="Fog"){document.getElementById("logo1").src = "img/wind.png";}
-                            else if(weather1==="Few clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
-                            else if(weather1.includes("Snow")){document.getElementById("logo1").src = "img/snow.png";}
-                            else if(weather1==="Moderate rain"){document.getElementById("logo1").src = "img/rain.png";}
-                    
-                
-                
-                 }
+                    function getLogo (logo1,weather1) {
+               
+                        if(weather1==="Mist"){logo1.src = "img/wind.png";}
+                        else if(weather1==="Broken clouds"){logo1.src = "img/cloud-sun.png";}
+                        else if(weather1==="Scattered clouds"){logo1.src = "img/cloud-sun.png";}
+                        else if(weather1==="Overcast clouds"){logo1.src = "img/cloud.png";}
+                        else if(weather1.includes("snow")){logo1.src = "img/snow.png";}
+                        else if(weather1==="Shower rain"){logo1.src = "img/rain.png";}
+                        else if(weather1==="Light shower rain"){logo1.src = "img/rain.png";}
+                        else if(weather1==="Clear sky"){logo1.src = "img/sun.png";}
+                        else if(weather1==="Fog"){logo1.src = "img/wind.png";}
+                        else if(weather1==="Few clouds"){logo1.src = "img/cloud-sun.png";}
+                        else if(weather1==="Light shower rain"){logo1.src = "img/rain.png";}
+                        else if(weather1==="Moderate rain"){logo1.src = "img/rain.png";}
+                        else if(weather1==="Mix snow/rain"){logo1.src = "img/snow.png";}
+                        else if(weather1==="Light rain"){logo1.src = "img/rain.png";}
+    
+    
+                       
+                }
+                getLogo(document.getElementById("logo1"),document.getElementById("description1").innerHTML);
+                getLogo(document.getElementById("logoday1-1"),document.getElementById("descriptionday1-1").innerHTML);
+                getLogo(document.getElementById("logoday2-1"),document.getElementById("descriptionday2-1").innerHTML);
+                getLogo(document.getElementById("logoday3-1"),document.getElementById("descriptionday3-1").innerHTML);
+                getLogo(document.getElementById("logoday4-1"),document.getElementById("descriptionday4-1").innerHTML);
+                getLogo(document.getElementById("logoday5-1"),document.getElementById("descriptionday5-1").innerHTML);
+                  
+    
+    
+            }
 
 
 })();

@@ -97,6 +97,11 @@ body {
     width:60%;
 }
 
+#logoday1-1, #logoday2-1, #logoday3-1,#logoday4-1, #logoday5-1{
+    height:60%;
+    width:60%;
+}
+
 
 #fivedays-1{
     display:none;
