@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,900");
 
-h1{
+h1, h3{
     text-align: center;
+    margin-bottom:50px;
 }
+
+
 
 
 body {
@@ -13,6 +16,9 @@ body {
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(to right top, #072736, #a5c7d7, #b1d4e2, #e0d533, #407a8f);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 
@@ -24,7 +30,7 @@ body {
     grid-template-rows:50px 40px 180px ;
     padding-top:20px;
     justify-content: center;
-    column-gap: 15px;
+    column-gap: 150px;
     width: 50%;
     margin:auto;
     
@@ -48,17 +54,57 @@ body {
 #weather1{
     border: 2px solid black;
     width: auto;
-    height: 135%;
+    height: 200%;
     margin: 0 auto;
     margin:1px;
     margin-top: 35px;
     
 }
 
+#more{
+    cursor: pointer;
+    display: inline block;
+    text-align: center;
+    margin-left: 30%;
+    border-radius: 5%;
+    color: white;
+    background-color: purple
+}
+
+#more-1{
+    cursor: pointer;
+    display: inline block;
+    text-align: center;
+    margin-left: 30%;
+    border-radius: 5%;
+    color: white;
+    background-color: green;
+}
+
+#fivedays{
+    display:none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px;
+    font-size: 9px;
+    margin-bottom: 60px;
+    height: 30%;
+    text-align: center;
+    
+}
+#fivedays-1{
+    display:none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px;
+    font-size: 9px;
+    margin-bottom: 60px;
+    height: 30%;
+    text-align: center;
+    
+}
 #weather2{
     border: 2px solid black;
     width: auto;
-    height: 135%;
+    height: 200%;
     margin: 0 auto;
     margin:1px;
     margin-top: 35px;
@@ -79,8 +125,15 @@ body {
 }
 
 #logo{
-    width: 40%;
-    height: 50%;
+    width: 30%;
+    height: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo1{
+    width: 30%;
+    height: 25%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -106,15 +159,7 @@ body {
     text-align: center;
 }
 
-#logo1{
-    width: 40%;
-    height: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
 
-}
 
 #temp1{
     font-size: large;

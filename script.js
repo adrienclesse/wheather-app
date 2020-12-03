@@ -7,9 +7,9 @@ document.getElementById("submit").addEventListener("click",function(){
 });
 
         function weatherBalloon(name) {
-            var key = '702246c8311d022c589bc7ec36af5fdf';
+            const key = 'b62a02d6293f4aed8aea1a05ad06be01';
             
-            fetch('https://api.openweathermap.org/data/2.5/weather?q=' + name + '&appid=' + key)  
+            fetch('https://api.weatherbit.io/v2.0/forecast/daily?city=' + name + '&key=' + key)  
             .then(function(resp) { return resp.json() }) // Convert data to json
             .then(function(data) {
                 console.log(data);
@@ -24,27 +24,44 @@ document.getElementById("submit").addEventListener("click",function(){
         
 
         function drawWeather( data ) {
-            var celcius = Math.round(parseFloat(data.main.temp)-273.15);
-            var fahrenheit = Math.round(((parseFloat(data.main.temp)-273.15)*1.8)+32); 
+           // var celcius = Math.round(parseFloat(data.main.temp)-273.15);
+           // var fahrenheit = Math.round(((parseFloat(data.main.temp)-273.15)*1.8)+32); 
             
-            document.getElementById('description').innerHTML = data.weather[0].description;
-            document.getElementById('temp').innerHTML = celcius + '&deg;';
-            document.getElementById('location').innerHTML = data.name;
+            document.getElementById('description').innerHTML = data.data[0].weather.description;
+            document.getElementById('temp').innerHTML = data.data[0].temp + '&deg;';
+            document.getElementById('location').innerHTML = data.city_name;
+
+            document.getElementById('descriptionday1').innerHTML = data.data[1].weather.description;
+            document.getElementById('descriptionday2').innerHTML = data.data[2].weather.description;
+            document.getElementById('descriptionday3').innerHTML = data.data[3].weather.description;
+            document.getElementById('descriptionday4').innerHTML = data.data[4].weather.description;
+            document.getElementById('descriptionday5').innerHTML = data.data[5].weather.description;
+
+            document.getElementById('tempday1').innerHTML = data.data[0].temp + '&deg;';
+            document.getElementById('tempday2').innerHTML = data.data[0].temp + '&deg;';
+            document.getElementById('tempday3').innerHTML = data.data[0].temp + '&deg;';
+            document.getElementById('tempday4').innerHTML = data.data[0].temp + '&deg;';
+            document.getElementById('tempday5').innerHTML = data.data[0].temp + '&deg;';
+
+
+
+
 
             let weather = document.getElementById('description').innerHTML;
-                if(weather==="mist"){document.getElementById("logo").src = "img/wind.png";}
-                else if(weather==="broken clouds"){document.getElementById("logo").src = "img/cloud-sun.png";}
-                else if(weather==="scattered clouds"){document.getElementById("logo").src = "img/cloud-sun.png";}
-                else if(weather==="overcast clouds"){document.getElementById("logo").src = "img/cloud.png";}
-                else if(weather==="snow"){document.getElementById("logo").src = "img/snow.png";}
-                else if(weather==="shower rain"){document.getElementById("logo").src = "img/rain.png";}
-                else if(weather==="light rain"){document.getElementById("logo").src = "img/rain.png";}
-                else if(weather==="clear sky"){document.getElementById("logo").src = "img/sun.png";}
-                else if(weather==="fog"){document.getElementById("logo").src = "img/wind.png";}
-                else if(weather==="few clouds"){document.getElementById("logo").src = "img/cloud-sun.png";}
+                if(weather==="Mist"){document.getElementById("logo").src = "img/wind.png";}
+                else if(weather==="Broken clouds"){document.getElementById("logo").src = "img/cloud-sun.png";}
+                else if(weather==="Scattered clouds"){document.getElementById("logo").src = "img/cloud-sun.png";}
+                else if(weather==="Overcast clouds"){document.getElementById("logo").src = "img/cloud.png";}
+                else if(weather.includes("snow")){document.getElementById("logo").src = "img/snow.png";}
+                else if(weather==="Shower rain"){document.getElementById("logo").src = "img/rain.png";}
+                else if(weather==="Light shower rain"){document.getElementById("logo").src = "img/rain.png";}
+                else if(weather==="Clear sky"){document.getElementById("logo").src = "img/sun.png";}
+                else if(weather==="Fog"){document.getElementById("logo").src = "img/wind.png";}
+                else if(weather==="Few clouds"){document.getElementById("logo").src = "img/cloud-sun.png";}
 
 
           }
+
 
 (function(){
         let name1= "paris";
@@ -56,9 +73,9 @@ document.getElementById("submit").addEventListener("click",function(){
         });
         
                 function weatherBalloon(name1) {
-                    const key = '702246c8311d022c589bc7ec36af5fdf';
+                    const key = 'b62a02d6293f4aed8aea1a05ad06be01';
                     
-                    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + name1 + '&appid=' + key)  
+                    fetch('https://api.weatherbit.io/v2.0/forecast/daily?city=' + name1 + '&key=' + key)  
                     .then(function(resp1) { return resp1.json() }) // Convert data to json
                     .then(function(data1) {
                         console.log(data1);
@@ -72,29 +89,78 @@ document.getElementById("submit").addEventListener("click",function(){
                 
                 
         
-                function drawWeather( d ) {
-                    var celcius = Math.round(parseFloat(d.main.temp)-273.15);
-                    var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+                function drawWeather( data1 ) {
+                   // var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+                   // var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
                     
-                    document.getElementById('description1').innerHTML = d.weather[0].description;
-                    document.getElementById('temp1').innerHTML = celcius + '&deg;';
-                    document.getElementById('location1').innerHTML = d.name;
+                    document.getElementById('description1').innerHTML =  data1.data[0].weather.description;
+                    document.getElementById('temp1').innerHTML =data1.data[0].temp  + '&deg;';
+                    document.getElementById('location1').innerHTML = data1.city_name;
+
+
+                    document.getElementById('descriptionday1-1').innerHTML = data1.data[1].weather.description;
+                    document.getElementById('descriptionday2-1').innerHTML = data1.data[2].weather.description;
+                    document.getElementById('descriptionday3-1').innerHTML = data1.data[3].weather.description;
+                    document.getElementById('descriptionday4-1').innerHTML = data1.data[4].weather.description;
+                    document.getElementById('descriptionday5-1').innerHTML = data1.data[5].weather.description;
+
+                    document.getElementById('tempday1-1').innerHTML = data1.data[0].temp + '&deg;';
+                    document.getElementById('tempday2-1').innerHTML = data1.data[0].temp + '&deg;';
+                    document.getElementById('tempday3-1').innerHTML = data1.data[0].temp + '&deg;';
+                    document.getElementById('tempday4-1').innerHTML = data1.data[0].temp + '&deg;';
+                    document.getElementById('tempday5-1').innerHTML = data1.data[0].temp + '&deg;';
+
+
                     let weather1 = document.getElementById('description1').innerHTML;
-                    
-                            if(weather1==="clear sky"){document.getElementById("logo1").src = "img/sun.png";}
-                            else if(weather1==="scattered clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
-                            else if(weather1==="broken clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
-                            else if(weather1==="overcast clouds"){document.getElementById("logo1").src = "img/cloud.png";}
-                            else if(weather1==="shower rain"){document.getElementById("logo1").src = "img/rain.png";}
-                            else if(weather1==="mist"){document.getElementById("logo1").src = "img/wind.png";}
-                            else if(weather1==="light rain"){document.getElementById("logo1").src = "img/rain.png";}
-                            else if(weather1==="fog"){document.getElementById("logo1").src = "img/wind.png";}
-                            else if(weather1==="few clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
-                            else if(weather1.includes("snow")){document.getElementById("logo1").src = "img/snow.png";}
+
+                            if(weather1==="Clear sky"){document.getElementById("logo1").src = "img/sun.png";}
+                            else if(weather1==="Scattered clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
+                            else if(weather1==="Broken clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
+                            else if(weather1==="Overcast clouds"){document.getElementById("logo1").src = "img/cloud.png";}
+                            else if(weather1==="Shower rain"){document.getElementById("logo1").src = "img/rain.png";}
+                            else if(weather1==="Mist"){document.getElementById("logo1").src = "img/wind.png";}
+                            else if(weather1==="Light rain"){document.getElementById("logo1").src = "img/rain.png";}
+                            else if(weather1==="Fog"){document.getElementById("logo1").src = "img/wind.png";}
+                            else if(weather1==="Few clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
+                            else if(weather1.includes("Snow")){document.getElementById("logo1").src = "img/snow.png";}
                 }
+
+
 })();
 
 
+
+
+
+
+
+
+
+    document.getElementById("more").addEventListener("click",function() {
+        
+        if (document.getElementById("fivedays").style.display == "grid") {document.getElementById("fivedays").style.display = "none";}
+        else if  (document.getElementById("fivedays").style.display = "none") {document.getElementById("fivedays").style.display = "grid";}
+         
+         if (document.getElementById("more").innerHTML=== "5 days forecast") {document.getElementById("more").innerHTML= "Back to normal"}
+         else if (document.getElementById("more").innerHTML= "Back to normal") {document.getElementById("more").innerHTML= "5 days forecast"}
+
+    });
+
+
+    document.getElementById("more-1").addEventListener("click",function() {
+        let display=document.getElementById("fivedays-1").style.display
+        if (document.getElementById("fivedays-1").style.display == "grid") {document.getElementById("fivedays-1").style.display = "none";}
+        else if  (document.getElementById("fivedays-1").style.display = "none") {document.getElementById("fivedays-1").style.display = "grid";}
+         
+         if (document.getElementById("more-1").innerHTML=== "5 days forecast") {document.getElementById("more-1").innerHTML= "Back to normal"}
+         else if (document.getElementById("more-1").innerHTML= "Back to normal") {document.getElementById("more-1").innerHTML= "5 days forecast"}
+
+    });
+
+    
+  
+
+   
 
 
 
