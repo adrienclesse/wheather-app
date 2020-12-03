@@ -2,7 +2,7 @@
 
 h1, h3{
     text-align: center;
-    margin-bottom:50px;
+    margin-bottom:10px;
 }
 
 
@@ -54,7 +54,7 @@ body {
 #weather1{
     border: 2px solid black;
     width: auto;
-    height: 200%;
+    height: 230%;
     margin: 0 auto;
     margin:1px;
     margin-top: 35px;
@@ -86,17 +86,22 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 80px;
     font-size: 9px;
-    margin-bottom: 60px;
+    margin-top: 15px;
     height: 30%;
     text-align: center;
     
+}
+
+#logoday1, #logoday2, #logoday3,#logoday4, #logoday5{
+    height:60%;
+    width:60%;
 }
 #fivedays-1{
     display:none;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 80px;
     font-size: 9px;
-    margin-bottom: 60px;
+    margin-top: 15px;
     height: 30%;
     text-align: center;
     
@@ -104,7 +109,7 @@ body {
 #weather2{
     border: 2px solid black;
     width: auto;
-    height: 200%;
+    height: 230%;
     margin: 0 auto;
     margin:1px;
     margin-top: 35px;

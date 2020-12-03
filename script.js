@@ -37,32 +37,41 @@ document.getElementById("submit").addEventListener("click",function(){
             document.getElementById('descriptionday4').innerHTML = data.data[4].weather.description;
             document.getElementById('descriptionday5').innerHTML = data.data[5].weather.description;
 
-            document.getElementById('tempday1').innerHTML = data.data[0].temp + '&deg;';
-            document.getElementById('tempday2').innerHTML = data.data[0].temp + '&deg;';
-            document.getElementById('tempday3').innerHTML = data.data[0].temp + '&deg;';
-            document.getElementById('tempday4').innerHTML = data.data[0].temp + '&deg;';
+            document.getElementById('tempday1').innerHTML = data.data[1].temp + '&deg;';
+            document.getElementById('tempday2').innerHTML = data.data[2].temp + '&deg;';
+            document.getElementById('tempday3').innerHTML = data.data[3].temp + '&deg;';
+            document.getElementById('tempday4').innerHTML = data.data[4].temp + '&deg;';
             document.getElementById('tempday5').innerHTML = data.data[0].temp + '&deg;';
 
 
 
 
+            function getLogo (logo,weather) {
+               
+                    if(weather==="Mist"){logo.src = "img/wind.png";}
+                    else if(weather==="Broken clouds"){logo.src = "img/cloud-sun.png";}
+                    else if(weather==="Scattered clouds"){logo.src = "img/cloud-sun.png";}
+                    else if(weather==="Overcast clouds"){logo.src = "img/cloud.png";}
+                    else if(weather.includes("snow")){logo.src = "img/snow.png";}
+                    else if(weather==="Shower rain"){logo.src = "img/rain.png";}
+                    else if(weather==="Light shower rain"){logo.src = "img/rain.png";}
+                    else if(weather==="Clear sky"){logo.src = "img/sun.png";}
+                    else if(weather==="Fog"){logo.src = "img/wind.png";}
+                    else if(weather==="Few clouds"){logo.src = "img/cloud-sun.png";}
+                    else if(weather==="Light shower rain"){logo.src = "img/rain.png";}
+                    else if(weather==="Moderate rain"){logo.src = "img/rain.png";}
+                   
+            }
+            getLogo(document.getElementById("logo"),document.getElementById("description").innerHTML);
+            getLogo(document.getElementById("logoday1"),document.getElementById("descriptionday1").innerHTML);
+            getLogo(document.getElementById("logoday2"),document.getElementById("descriptionday2").innerHTML);
+            getLogo(document.getElementById("logoday3"),document.getElementById("descriptionday3").innerHTML);
+            getLogo(document.getElementById("logoday4"),document.getElementById("description").innerHTML);
+            getLogo(document.getElementById("logoday5"),document.getElementById("description").innerHTML);
+              
 
-            let weather = document.getElementById('description').innerHTML;
-                if(weather==="Mist"){document.getElementById("logo").src = "img/wind.png";}
-                else if(weather==="Broken clouds"){document.getElementById("logo").src = "img/cloud-sun.png";}
-                else if(weather==="Scattered clouds"){document.getElementById("logo").src = "img/cloud-sun.png";}
-                else if(weather==="Overcast clouds"){document.getElementById("logo").src = "img/cloud.png";}
-                else if(weather.includes("snow")){document.getElementById("logo").src = "img/snow.png";}
-                else if(weather==="Shower rain"){document.getElementById("logo").src = "img/rain.png";}
-                else if(weather==="Light shower rain"){document.getElementById("logo").src = "img/rain.png";}
-                else if(weather==="Clear sky"){document.getElementById("logo").src = "img/sun.png";}
-                else if(weather==="Fog"){document.getElementById("logo").src = "img/wind.png";}
-                else if(weather==="Few clouds"){document.getElementById("logo").src = "img/cloud-sun.png";}
 
-
-          }
-
-
+        }
 (function(){
         let name1= "paris";
         weatherBalloon(name1);
@@ -104,13 +113,13 @@ document.getElementById("submit").addEventListener("click",function(){
                     document.getElementById('descriptionday4-1').innerHTML = data1.data[4].weather.description;
                     document.getElementById('descriptionday5-1').innerHTML = data1.data[5].weather.description;
 
-                    document.getElementById('tempday1-1').innerHTML = data1.data[0].temp + '&deg;';
-                    document.getElementById('tempday2-1').innerHTML = data1.data[0].temp + '&deg;';
-                    document.getElementById('tempday3-1').innerHTML = data1.data[0].temp + '&deg;';
-                    document.getElementById('tempday4-1').innerHTML = data1.data[0].temp + '&deg;';
-                    document.getElementById('tempday5-1').innerHTML = data1.data[0].temp + '&deg;';
+                    document.getElementById('tempday1-1').innerHTML = data1.data[1].temp + '&deg;';
+                    document.getElementById('tempday2-1').innerHTML = data1.data[2].temp + '&deg;';
+                    document.getElementById('tempday3-1').innerHTML = data1.data[3].temp + '&deg;';
+                    document.getElementById('tempday4-1').innerHTML = data1.data[4].temp + '&deg;';
+                    document.getElementById('tempday5-1').innerHTML = data1.data[5].temp + '&deg;';
 
-
+                    function getLogo1(logo1,weather1){}
                     let weather1 = document.getElementById('description1').innerHTML;
 
                             if(weather1==="Clear sky"){document.getElementById("logo1").src = "img/sun.png";}
@@ -123,7 +132,11 @@ document.getElementById("submit").addEventListener("click",function(){
                             else if(weather1==="Fog"){document.getElementById("logo1").src = "img/wind.png";}
                             else if(weather1==="Few clouds"){document.getElementById("logo1").src = "img/cloud-sun.png";}
                             else if(weather1.includes("Snow")){document.getElementById("logo1").src = "img/snow.png";}
-                }
+                            else if(weather1==="Moderate rain"){document.getElementById("logo1").src = "img/rain.png";}
+                    
+                
+                
+                 }
 
 
 })();
