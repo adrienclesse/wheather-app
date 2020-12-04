@@ -174,8 +174,8 @@ document.getElementById("submit").addEventListener("click",function(){
         if (document.getElementById("fivedays").style.display == "grid") {document.getElementById("fivedays").style.display = "none";}
         else if  (document.getElementById("fivedays").style.display = "none") {document.getElementById("fivedays").style.display = "grid";}
          
-         if (document.getElementById("more").innerHTML=== "Back to normal") {document.getElementById("more").innerHTML= "5 days forecast"}
-         else if (document.getElementById("more").innerHTML= "5 days forecast") {document.getElementById("more").innerHTML= "Back to normal"}
+         if (document.getElementById("more").innerHTML=== "Hide") {document.getElementById("more").innerHTML= "5 days forecast"}
+         else if (document.getElementById("more").innerHTML= "5 days forecast") {document.getElementById("more").innerHTML= "Hide"}
 
     });
 
@@ -185,8 +185,8 @@ document.getElementById("submit").addEventListener("click",function(){
         if (document.getElementById("fivedays-1").style.display == "grid") {document.getElementById("fivedays-1").style.display = "none";}
         else if  (document.getElementById("fivedays-1").style.display = "none") {document.getElementById("fivedays-1").style.display = "grid";}
          
-         if (document.getElementById("more-1").innerHTML=== "Back to normal") {document.getElementById("more-1").innerHTML= "5 days forecast"}
-         else if (document.getElementById("more-1").innerHTML= "5 days forecast") {document.getElementById("more-1").innerHTML= "Back to normal"}
+         if (document.getElementById("more-1").innerHTML=== "Hide") {document.getElementById("more-1").innerHTML= "Display 5 days forecast"}
+         else if (document.getElementById("more-1").innerHTML= "Display 5 days forecast") {document.getElementById("more-1").innerHTML= "Hide"}
 
     });
 
