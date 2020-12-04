@@ -220,9 +220,11 @@ body {
 
     #weather1{
         display:grid;
-        width: 350px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 150%;
+        justify-content: center;
+        align-content: center;
+        text-align:center;
+        border: none;
 
     }
 
@@ -238,7 +240,9 @@ body {
         grid-template-columns:100%;
         grid-template-rows:45px 25px 180px ;
         justify-items:center;
-        margin: auto;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%
 
 }
 #fivedays{
@@ -254,8 +258,8 @@ body {
 
 #logo{
     
-        width: 40%;
-        height: 110%;
+        width: 100px;
+        height: 100px;
 
     }
 }
