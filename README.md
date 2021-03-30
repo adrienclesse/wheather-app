@@ -12,7 +12,7 @@ In order to display the weather, I got a key on the Weatherbit website then used
 
 ### final result  
 
-[Click here t see the final result](https://adrienclesse.github.io/wheater-app.html)
+[Click here t see the final result](https://adrienclesse.github.io/wheather-app/)
 
 ***
 ## 3. The interface complex n°6
